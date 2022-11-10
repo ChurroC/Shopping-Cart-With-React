@@ -5,19 +5,22 @@ import Store from '@/pages/Store'
 import About from '@/pages/About'
 import Navbar from '@/components/Navbar'
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Container fluid className='bm-4'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/store' element={<Store />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </Container>
-    </>
-  )
+/**
+ * @returns {JSX.Element} app component
+ */
+function App(): JSX.Element {
+    return (
+        <>
+            <Navbar />
+            <Container fluid className='bm-4'>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/store' element={<Store />} />
+                    <Route path='/about' element={<About />} />
+                </Routes>
+            </Container>
+        </>
+    )
 }
 
 export default App

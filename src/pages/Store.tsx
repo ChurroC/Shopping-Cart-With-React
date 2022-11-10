@@ -1,14 +1,17 @@
-import storeItems from '../data/items.json';
-import StoreItem from '../components/StoreItem';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import storeItems from '../data/items.json'
+import StoreItem from '../components/StoreItem'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
+/**
+ * @returns store page component
+ */
 export default function Store() {
     return (
         <>
             <h1>Store</h1>
             <Row md={2} xs={1} lg={3} className='g-3'>
-                {storeItems.map(item => (
+                {storeItems.map((item) => (
                     <Col key={item.id}>
                         <StoreItem {...item} />
                     </Col>
