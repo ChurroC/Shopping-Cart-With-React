@@ -2,13 +2,6 @@ import formatCurrency from '@/utility/formatCurrency'
 import { Button } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 
-/**
- * @typedef {StoreItemProps} obj - object containing store item properties
- * @property {number} obj.id - store item id
- * @property {string} obj.name - store item name
- * @property {number} obj.price - store item price
- * @property {string} obj.imgUrl - store item image url
- */
 type StoreItemProps = {
     id: number
     name: string
@@ -16,10 +9,12 @@ type StoreItemProps = {
     imgUrl: string
 }
 
-StoreItem()
-
 /**
- * @param {StoreItemProps} props - store item properties
+ * @param {StoreItemProps} StoreItem - object containing store item properties
+ * @param {number} StoreItem.id - store item id
+ * @param {string} StoreItem.name - store item name
+ * @param {number} StoreItem.price - store item price
+ * @param {string} StoreItem.imgUrl - store item image url
  * @returns {JSX.Element} store item component
  */
 export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps): JSX.Element {
