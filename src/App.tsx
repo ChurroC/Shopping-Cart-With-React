@@ -4,13 +4,11 @@ import Home from '@/pages/Home'
 import Store from '@/pages/Store'
 import About from '@/pages/About'
 import Navbar from '@/components/Navbar'
+import { ShoppingCartProvider } from '@/context/ShoppingCartContext'
 
-/**
- * @returns {JSX.Element} app component
- */
-function App(): JSX.Element {
+function App() {
     return (
-        <>
+        <ShoppingCartProvider>
             <Navbar />
             <Container fluid className='bm-4'>
                 <Routes>
@@ -19,7 +17,7 @@ function App(): JSX.Element {
                     <Route path='/about' element={<About />} />
                 </Routes>
             </Container>
-        </>
+        </ShoppingCartProvider>
     )
 }
 
